@@ -7,18 +7,22 @@ https://github.com/libermany/videocall/blob/main/index.html
    </head>
     <body style="background-image: url(https://www.kornit.com/wp-content/uploads/2022/07/hero-4.jpg);">
         <h1  style="color:rgb(233, 255, 30);">Video Call</h1>
-<script type="text/javascript" charset="utf-8">
-  (function (g, e, n, es, ys) {
-    g['_genesysJs'] = e;
-    g[e] = g[e] || function () {
-      (g[e].q = g[e].q || []).push(arguments)
-    };
-    g[e].t = 1 * new Date();
-    g[e].c = es;
-    ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
-  })(window, 'Genesys', 'https://apps.euw2.pure.cloud/genesys-bootstrap/genesys.min.js', {
-    environment: 'prod-euw2',
-    deploymentId: '2b22f633-7ddf-4bbb-8eb8-748613d8c3df'
+<script>
+  (function(){
+      var s=document.createElement('script');
+      s.src='https://auvious.video/widget/dist/auvious/auvious.esm.js';
+      s.type='module';
+      document.head.appendChild(s);
+      var n=document.createElement('script');
+      n.src='https://auvious.video/widget/dist/auvious/auvious.js';
+      n.noModule=true;
+      document.head.appendChild(n);
+  })();
+  var opts={'deployment-id':'01a45d9d-bfaa-4a13-828a-c0af7d57a9e5','auvious-environment':'auvious.video'};
+  window.customElements.whenDefined('app-auvious-widget').then(function(){
+      var w=document.createElement('app-auvious-widget');
+      Object.keys(opts).forEach(k=>w.setAttribute(k,opts[k]));
+      document.body.appendChild(w);
   });
 </script>
         <p style="color:rgb(233, 255, 30);">This is a simple paragraph.</p>
